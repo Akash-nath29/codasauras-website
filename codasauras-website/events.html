@@ -19,202 +19,171 @@
 			font-size: xx-large;
 		}
 
-		
-		
 
-		
+		#circle {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			z-index: 99999;
+			border-radius: 50%;
+			background-color: white;
+			mix-blend-mode: difference;
+			/* Apply negative effect */
+			pointer-events: none;
+			/* Allow mouse events to pass through */
+			transition: all 0.12s ease;
+
+		}
+
+		#circleMini {
+			position: fixed;
+			width: 10px;
+			height: 10px;
+			z-index: 999999;
+			border-radius: 50%;
+			background-color: white;
+			mix-blend-mode: difference;
+			/* Apply negative effect */
+			pointer-events: none;
+			/* Allow mouse events to pass through */
+			transition: all 0.1s ease;
+		}
 	</style>
 </head>
 
 <body>
 
-	
-	<header class="header">
-		<div class="header__container">
-			<div class="header__wrapper">
-				<a class="header__logo" href="index.html" style="display: flex; align-items: center;">
-					<img src="./original-logo.png" alt="Logo" class="logo-image"
-						style="margin: 20px;height: 50%;width: 50%;">
-					<h1 class="logo_main">Coda<span style="color: #55DFFA; display: initial;">Sauras</span></h1>
-				</a>
+	<div id="circle"></div>
+	<div id="circleMini"></div>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__wrapper">
+					<a class="header__logo" href="index.html" style="display: flex; align-items: center;">
+						<img src="./original-logo.png" alt="Logo" class="logo-image"
+							style="margin: 20px;height: 50%;width: 50%;">
+						<h1 class="logo_main">Coda<span style="color: #55DFFA; display: initial;">Sauras</span></h1>
+					</a>
 
-				<nav class="header__menu menu">
-					<ul class="menu__items">
-						<li class="menu__item"><a href="index.html">home.</a></li>
-						<li class="menu__item"><a href="events.html">events.</a></li>
-						<li class="menu__item"><a href="contacts.html">contacts.</a></li>
-						<li class="menu__item menu__item_gradient"><a href="shop.html">#SHOP</a></li>
-					</ul>
-				</nav>
+					<nav class="header__menu menu">
+						<ul class="menu__items">
+							<li class="menu__item"><a href="index.html">home.</a></li>
+							<li class="menu__item"><a href="events.html">events.</a></li>
+							<li class="menu__item"><a href="contacts.html">contacts.</a></li>
+							<li class="menu__item menu__item_gradient"><a href="shop.html">#SHOP</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
-		</div>
-	</header>
-</div>
+		</header>
+	</div>
 
 
-            <!--MAIN CODE STARTS-->
+	<!--MAIN CODE STARTS-->
 
 
 
-    <style>
-        
+	<style>
+		.event-section {
+			max-width: 800px;
+			margin: auto;
+			background-color: white;
+			border-radius: 8px;
 
-        .event-section {
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-            border-radius: 8px;
-           
-            overflow: hidden;
-            text-align: center;
-            margin-top: 20px;
-        }
+			overflow: hidden;
+			text-align: center;
+			margin-top: 20px;
+		}
 
-        .event-image {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
+		.event-image {
+			width: 100%;
+			max-height: 400px;
+			object-fit: cover;
+		}
 
-        .event-content {
-            padding: 20px;
-            background: #813ACA;
-            color: white;
-        }
+		.event-content {
+			padding: 20px;
+			background: #813ACA;
+			color: white;
+		}
 
-        .event-title {
-            font-size: 2em;
-            margin: 0;
-        }
+		.event-title {
+			font-size: 2em;
+			margin: 0;
+		}
 
-        .event-description {
-            font-size: 1.1em;
-            margin: 15px 0;
-        }
+		.event-description {
+			font-size: 1.1em;
+			margin: 15px 0;
+		}
 
-        .register-button {
-            display: inline-block;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            background-color: #55DFFA;
-            padding: 12px 24px;
-            border-radius: 25px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
+		.register-button {
+			display: inline-block;
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			background-color: #55DFFA;
+			padding: 12px 24px;
+			border-radius: 25px;
+			transition: background-color 0.3s;
+			font-weight: bold;
+		}
 
-        .register-button:hover {
-            background-color: #ffffff;
-        }
+		.register-button:hover {
+			background-color: #ffffff;
+		}
 
-        @media (max-width: 768px) {
-            .event-title {
-                font-size: 1.6em;
-            }
+		@media (max-width: 768px) {
+			.event-title {
+				font-size: 1.6em;
+			}
 
-            .event-description {
-                font-size: 1em;
-            }
-        }
+			.event-description {
+				font-size: 1em;
+			}
 
-        @media (max-width: 480px) {
-            .event-title {
-                font-size: 1.4em;
-            }
+			#circle,
+			#circleMini {
+				display: none;
+			}
+		}
 
-            .event-description {
-                font-size: 0.9em;
-            }
+		@media (max-width: 480px) {
+			.event-title {
+				font-size: 1.4em;
+			}
 
-            .register-button {
-                padding: 10px 20px;
-            }
-        }
-    </style>
+			.event-description {
+				font-size: 0.9em;
+			}
+
+			.register-button {
+				padding: 10px 20px;
+			}
+		}
+	</style>
 
 
 	<div class="event-section">
-    	<img src="./event1o1.png" alt="Event Image" class="event-image">
-    	<div class="event-content">
-        	<h2 class="event-title">Codasauras Online Event</h2>
-        	<p class="event-description">Codasauras Online Event with Payal Jain (Founder & CEO of Funngro as seen on Shark Tank India S2) and Akash Jaswal(Research Assistant at University of Buffallo)</p>
-        	<a href="https://unstop.com/p/codasauras-online-event-with-payal-jain-founder-ceo-of-funngro-as-seen-on-shark-tank-india-s2-and-akash-jaswalresearch-984263" target="_blank" class="register-button">Register Now!</a>
-    	</div>
-	</div>
-
-
-
-
-<!--MAIN CODE ENDS-->
-
-
-
-
-
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="footer">
-	<div class="footer__container">
-		<div class="footer__wrapper">
-			<nav class="footer__menu menu-footer">
-				<ul class="menu-footer__items">
-					<li class="menu-footer__item"><a href="index.html">home.</a></li>
-					
-					<li class="menu-footer__item"><a href="events.html">events.</a></li>
-					<li class="menu-footer__item"><a href="contacts.html">contacts.</a></li>
-					<li class="menu-footer__item menu-footer__item_gradient"><a
-							href="shop.html">#SHOP</a></li>
-				</ul>
-			</nav>
-			<div class="footer__copyright">© 2024 codasauras</div>
+		<img src="./event1o1.png" alt="Event Image" class="event-image">
+		<div class="event-content">
+			<h2 class="event-title">Codasauras Online Event</h2>
+			<p class="event-description">Codasauras Online Event with Payal Jain (Founder & CEO of Funngro as seen on
+				Shark Tank India S2) and Akash Jaswal(Research Assistant at University of Buffallo)</p>
+			<a href="https://unstop.com/p/codasauras-online-event-with-payal-jain-founder-ceo-of-funngro-as-seen-on-shark-tank-india-s2-and-akash-jaswalresearch-984263"
+				target="_blank" class="register-button">Register Now!</a>
 		</div>
 	</div>
-</footer>
+
+
+
+
+	<!--MAIN CODE ENDS-->
+
+
+
+
+
+
+
 </body>
 <script>
 	window.addEventListener('DOMContentLoaded', () => {
@@ -317,5 +286,67 @@
 
 	});
 </script>
+
+<!-- </html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__wrapper">
+			<nav class="footer__menu menu-footer">
+				<ul class="menu-footer__items">
+					<li class="menu-footer__item"><a href="index.html">home.</a></li>
+
+					<li class="menu-footer__item"><a href="events.html">events.</a></li>
+					<li class="menu-footer__item"><a href="contacts.html">contacts.</a></li>
+					<li class="menu-footer__item menu-footer__item_gradient"><a href="shop.html">#SHOP</a></li>
+				</ul>
+			</nav>
+			<div class="footer__copyright">© 2024 codasauras</div>
+		</div>
+	</div>
+</footer>
+</body>
 
 </html>
