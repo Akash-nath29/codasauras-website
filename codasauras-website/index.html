@@ -244,6 +244,55 @@
 			transition: all 0.1s ease;
 		}
 
+		.form-group {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+			width: 100%;
+			margin: 10vh 0;
+			gap: 15px;
+		}
+
+		.form-group input {
+			width: 70%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ebebeb;
+			outline: none;
+			font-size: 26px;
+			background-color: transparent;
+			caret-color: white;
+			color: white;
+		}
+
+		.form-group button {
+			width: 20%;
+			padding: 10px;
+			border-radius: 5px;
+			/* border: 1px solid #ebebeb; */
+			font-size: 26px;
+			/* background-color: #55DFFA; */
+			/* color: white; */
+			cursor: pointer;
+			transition-duration: 0.4s;
+		}
+
+		.form-group button:hover {
+			border: 1px solid #fff;
+			color: white;
+		}
+
+		.newsletter-form {
+			/* padding-left: 5vh; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+		}
+
 		@media only screen and (max-width: 768px) {
 			.logo-image {
 				margin: 20px;
@@ -283,6 +332,22 @@
 					border-radius: 10px;
 					width: 80px;
 				}
+			}
+
+			.form-group {
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.form-group input {
+				width: 95%;
+				font-size: 16px;
+			}
+
+			.form-group button {
+				width: 95%;
+				font-size: 16px;
 			}
 		}
 
@@ -834,7 +899,8 @@
 												</div>
 												<div class="slide-comm__text-wrapper">
 													<div class="slide-comm__text needShowMore">
-														<p>Our Machine Learning team is truly exceptional. The collaborative
+														<p>Our Machine Learning team is truly exceptional. The
+															collaborative
 															spirit and forward-thinking approach make it an exciting
 															place to contribute. Leadership encourages innovation,
 															fostering an inclusive, supportive, and respectful work
@@ -1081,6 +1147,22 @@
 								</div>
 							</div>
 						</div>
+					</section>
+
+					<section class="our-jobs-link">
+						<div class="what-we-say__title title">Get <span class="text_grey">Our Newsletter</span><span
+								class="text-accent_orange">/</span>
+						</div>
+						<!-- Create a form for emails where there will be an email input field and a button named "Subscribe" so that user can subscribe to free quarterly newsletter from us -->
+						<form action="#" class="how-we-work__list-wrapper block-cross-out newsletter-form" onsubmit="alert('We got your email!! Please wait for next issue!!')">
+							<div class="form-group">
+								<input type="email" class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp" placeholder="Enter email">
+								<button type="submit" class="">
+									Subscribe
+								</button>
+							</div>
+						</form>
 					</section>
 
 					<!--//========== our-jobs-link = section =========================-->
