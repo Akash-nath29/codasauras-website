@@ -55,26 +55,26 @@
 
 	<div id="circle"></div>
 	<div id="circleMini"></div>
-		<header class="header">
-			<div class="header__container">
-				<div class="header__wrapper">
-					<a class="header__logo" href="index.html" style="display: flex; align-items: center;">
-						<img src="./original-logo.png" alt="Logo" class="logo-image"
-							style="margin: 20px;height: 50%;width: 50%;">
-						<h1 class="logo_main">Coda<span style="color: #55DFFA; display: initial;">Sauras</span></h1>
-					</a>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__wrapper">
+				<a class="header__logo" href="index.html" style="display: flex; align-items: center;">
+					<img src="./original-logo.png" alt="Logo" class="logo-image"
+						style="margin: 20px;height: 50%;width: 50%;">
+					<h1 class="logo_main">Coda<span style="color: #55DFFA; display: initial;">Sauras</span></h1>
+				</a>
 
-					<nav class="header__menu menu">
-						<ul class="menu__items">
-							<li class="menu__item"><a href="index.html">home.</a></li>
-							<li class="menu__item"><a href="events.html">events.</a></li>
-							<li class="menu__item"><a href="contacts.html">contacts.</a></li>
-							<li class="menu__item menu__item_gradient"><a href="shop.html">#SHOP</a></li>
-						</ul>
-					</nav>
-				</div>
+				<nav class="header__menu menu">
+					<ul class="menu__items">
+						<li class="menu__item"><a href="index.html">home.</a></li>
+						<li class="menu__item"><a href="events.html">events.</a></li>
+						<li class="menu__item"><a href="contacts.html">contacts.</a></li>
+						<li class="menu__item menu__item_gradient"><a href="shop.html">#SHOP</a></li>
+					</ul>
+				</nav>
 			</div>
-		</header>
+		</div>
+	</header>
 	</div>
 
 
@@ -84,14 +84,15 @@
 
 	<style>
 		.event-section {
-			max-width: 800px;
-			margin: auto;
-			background-color: white;
+			/* max-width: 800px; */
+			/* margin: auto; */
+			/* background-color: white; */
 			border-radius: 8px;
 
-			overflow: hidden;
+			/* overflow: hidden; */
 			text-align: center;
-			margin-top: 20px;
+			/* margin-top: 20px; */
+			/* min-height: 27vh; */
 		}
 
 		.event-image {
@@ -131,6 +132,12 @@
 			background-color: #ffffff;
 		}
 
+		h1 {
+			font-size: 2em;
+			margin: 0;
+			background-color: transparent;
+		}
+
 		@media (max-width: 768px) {
 			.event-title {
 				font-size: 1.6em;
@@ -144,10 +151,12 @@
 			#circleMini {
 				display: none;
 			}
+
 			.event-image {
 				width: 70%;
 				background: #000;
 			}
+
 			.event-section {
 				margin: 10vh 0;
 			}
@@ -170,19 +179,67 @@
 
 
 	<div class="event-section">
-		<img src="./event1o2.jpg" alt="Event Image" class="event-image">
+		<!-- <img src="./event1o2.jpg" alt="Event Image" class="event-image">
 		<div class="event-content">
 			<h2 class="event-title">Codasauras Hybrid Event</h2>
 			<p class="event-description">Codasauras Hybrid Event with Dr. Rahul Paul on Computer Vision Techniques in Utility Industries</p>
 			<a href="https://forms.gle/K7Bg9fXqWk91rcub6"
 				target="_blank" class="register-button">Register Now!</a>
+		</div> -->
+		<div class="kronstories__container">
+			<div class="kronstories__wrapper">
+				<section class="stories">
+
+					<div class="stories__title title title_big">
+						<div class="stories__title_first-part">Updating...</div>
+					</div>
+					<div class="stories__title title title_big"><span class="text_grey">soon</span><span
+							class="text-accent_orange">/</span></div>
+				</section>
+				<div class="text-cascade-item__ascii text-cascade-item__ascii_desktop">
+					<pre>
+
+											 -+**#####+:                          
+										  .*%%%%%%%%%%%%=:                        
+										 :%%%%-:::::-%%%%%%+.                     
+									  .*%%%##-.......:+####%%#=                   
+									.-#%%#:................=%%%*-                 
+								   #%%%%*:....-+-:-.........+#%%%%+               
+								  +%%%=......+%=  .*...........+%%%+              
+								  #%%%:--....=%%**%*......%%+...%%%%              
+								  #@%%===.....-+++-.......#%+...*%%%              
+								  #%%%===......................:%%%#              
+								  #%%%===....:++++++++++++++++*%%%%-              
+								  #%%%===:....=*************#%%%%%-               
+								  #%%%===.....===+*********#%%%*:                 
+								  #%%%=::.....===%%%%%%%%%%%%#-                   
+								-=%%%%........===%@%%======-.                     
+		 :--:                  #%%%%*-........:-=%%%#                             
+	   -%%%%%#:            -*#%%%%+.............:%%%%%%%%%*=:                     
+	   %%%%%%%%=:         +%%%%%%*........:+*=...=*#####%%%%%#:                   
+	  :%%%%=+#%%%*        %%%%=-:.........+%%%*:.......:==*%%%#                   
+	  :%%%%:..*%%%-    =#%%%%+.............-#%%%*-::::::++#%%%%                   
+	  :%%%%:...*%%%%#+*%%%#=:..........-*%%#+*%%%%%%%%%%%%%%%%-                   
+	  .%%%%-....-#%%%%%%%%-..............-%%%*=+*%%%%#####*+-                     
+	   =%%%%+.....:::::::.....:-==-.......%%%#===%%%#                             
+		 -%%%%+=::::::::::::::-==+*-......%%%#===%%%#                             
+		  :%%%%%%+=============#%%%=...:=*%%%#===%%%%+-                           
+			.-=%%%#***********#%%%%=...=+#%%%#===**#%%%%:                         
+				=#%%%%%%%%%%%%%%%%%=::::::%%%%#+++++*%%%*                         
+				  .:::::::::::-%%%%%%%%%%%%%%%%%%%%%%%%%=                         
+							   .=*####################+:                          
+																				  
+				</pre>
+
+
+				</div>
+			</div>
 		</div>
-	</div>
 
 
 
 
-	<!--MAIN CODE ENDS-->
+		<!--MAIN CODE ENDS-->
 
 
 
